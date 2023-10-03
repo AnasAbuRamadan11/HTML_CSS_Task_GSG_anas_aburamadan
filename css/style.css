@@ -1,0 +1,568 @@
+
+:root {
+
+    --mainColor: #eec7bf;
+    --logoColor: #ff2b00;
+    --mainPaddingSection: 120px;
+    --letterSpacing: 1px;
+    --textColor: #233b41;
+    --lineHeight: 1.6;
+    --colorOfP: #6f6f6f;
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family: 'Open Sans', sans-serif;
+    /* height: 2000px; */
+}
+
+
+/* start Global attributes */
+
+ul {
+
+    list-style: none;
+}
+
+a {
+
+    text-decoration: none;
+}
+
+.container {
+
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container2 {
+
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small screen */
+
+@media(min-width: 768px) {
+
+    .container {
+
+        width: 750px;
+    }
+}
+
+/* Medium screen */
+
+@media(min-width: 992px) {
+
+    .container {
+
+        width: 970px;
+    }
+}
+
+/* Large screen */
+
+@media(min-width: 1200px) {
+    
+    .container {
+
+        width: 1170px;
+    }
+}
+
+@media(min-width: 992px) {
+
+    .container2 {
+
+        width: 970px;
+    }
+}
+
+/* Large screen */
+
+@media(min-width: 1200px) {
+    
+    .container2 {
+
+        width: 1170px;
+    }
+}
+
+@media(min-width: 1400px) {
+    
+    .container2 {
+
+        width: 1370px;
+    }
+}
+/* end Global attributes */
+
+
+/* start navbar section */
+
+.navbar {
+
+    background: #fff;
+    position: sticky;
+    width: 100%;
+    z-index: 10000;
+    top: 0;
+}
+
+.navbar img {
+
+    height: 77.6px;
+}
+
+.navbar .navContent {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .navContent .logo  h2 {
+
+    color: var(--secoundaryColor);
+}
+
+.navbar .navContent .logo h2 span {
+
+    color: var(--logoColor);
+}
+
+
+.navbar .navContent .menu ul li {
+
+    display: inline-block;
+    margin-left: 25px;
+    transition: all 0.3s linear;
+    transition: 0.3s linear;
+}
+
+.navbar .navContent .menu ul li:hover {
+
+    color: var(--logoColor);
+}
+
+.navbar .navContent .menu ul li:first-child {
+
+    margin-left: 0;
+}
+
+.navbar .navContent .menu ul li span {
+
+    font-size: 13px;
+    color: var(--mainColor);
+    font-weight: bold; 
+}
+
+.navbar .navContent .menu ul li a {
+
+    color: #000;
+    text-transform: uppercase;
+    /* transition: 0.5s; */
+    font-size: 14px;
+    letter-spacing: 0.7px;
+}
+
+.navbar .navContent .menu ul li a:hover {
+
+    color: var(--secoundaryColor);
+}
+
+.navbar .navContent .menu .menuIcon {
+
+    display: none;
+}
+
+.navbar .navContent .menuIcon {
+
+    font-size: 22px;
+    cursor: pointer;
+}
+
+@media(max-width:995px) {
+
+
+    .navbar .navContent .menu ul li span {
+
+        color: #fff;
+        margin-right: 2px;
+    }
+
+
+    .navbar .navContent .menu ul {
+
+        display: none;
+    }
+
+    .navbar .navContent .menu .menuIcon {
+
+        display: flex;
+    }
+
+    .navbar .navContent .menu i:hover + ul{
+
+        transition: 10s;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        width: 100%;
+        background: var(--mainColor);
+        margin-top: 20px;
+        z-index: 1000;
+        color: #fff;
+    }
+
+    
+    .navContent .menu ul li {
+
+        padding: 15px !important;
+    }
+
+    .navbar .navContent .menu ul li:first-child {
+
+        margin-left: 25px;
+    }
+
+
+} 
+
+/* end navbar section */
+
+
+/* start header section */
+
+.header {
+
+    width: 100%;
+    height: calc(100vh - 77.6px);
+    background-color: var(--mainColor);
+}
+
+.header .textContent {
+
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: calc(100vh - 77.6px);
+    left: 15%;
+} 
+
+.header .textContent h2 {
+
+    font-weight: normal;
+    font-size: 64px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    z-index: 2;
+    margin-bottom: 20px;
+} 
+
+.header .textContent button {
+
+    padding: 19px 24px;
+    background: #fff;
+    border: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 17px;
+    width: fit-content;
+    cursor: pointer;
+
+} 
+
+.header .textContent button i {
+
+    margin-left: 8px;
+} 
+
+.header .image {
+
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: calc(100vh - 77.6px);
+    right: 15%;
+}
+
+.header .image img {
+
+    width: 400px;
+    /* height: 400px; */
+    border-radius: 50%;
+}
+
+@media(max-width:1320px) {
+
+    .header .image {
+
+        display: none;
+    }
+}
+
+
+
+/* end header section */
+
+/* start ourServices Section */
+
+.ourServices {
+
+    padding-top: var(--mainPaddingSection);
+    padding-bottom: var(--mainPaddingSection);
+}
+
+.ourServicesContent {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(366px, 1fr));
+    gap: 20px;
+}
+
+.ourServicesContent .ourServicesContentFirst span {
+
+    color: #989898;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.ourServicesContent .ourServicesContentFirst h3 {
+
+    font-size: 36px;
+    font-weight: normal;
+    color: #233b41;
+    letter-spacing: var(--letterSpacing);
+    margin-bottom: 40px;
+}
+
+.ourServicesContent .first {
+
+    margin-bottom: 70px;
+}
+
+.ourServicesContent .first h4 {
+
+        font-size: 18px;
+        color: #294145;
+        /* font-weight: 600; */
+        letter-spacing: var(--letterSpacing);
+        margin-bottom: 12px;
+    }
+
+.ourServicesContent .first p {
+
+    color: #6f6f6f;
+    line-height: var(--lineHeight);
+}
+
+
+/* @media(max-width: 1000px) {
+
+    .ourServicesContent {
+
+        grid-template-columns: repeat(auto-fill, minmax(900px, 1fr));
+    }
+
+    .ourServicesContentFirst, .ourServicesContentSecound {
+
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(
+            300px, 1fr));
+    }
+} */
+
+
+/* end ourServices Section */
+
+
+/* start ourTeam Section */
+
+.ourTeam .ourTeamText {
+
+    text-align: center;
+}
+
+.ourTeam .ourTeamText span {
+
+    color: #989898;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.ourTeam .ourTeamText h4 {
+
+    font-size: 40px;
+    font-weight: normal;
+    color: #233b41;
+    letter-spacing: var(--letterSpacing);
+    margin-bottom: 40px;
+}
+
+.ourTeam .contentTeam {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(353px, 1fr));
+    gap: 40px;
+}
+
+.ourTeam .contentTeam .box .first {
+
+    position: relative;
+}
+
+.ourTeam .contentTeam .box .first .icon {
+
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.ourTeam .contentTeam .box .first .icon i {
+
+    display: block;
+    font-size: 21px;
+    margin-bottom: 10px;
+    color: #2a4247;
+    cursor: pointer;
+}
+
+.ourTeam .contentTeam .box .first img{
+
+    width: 100%;
+}
+
+.ourTeam .contentTeam .box .second h4{
+
+    color: var(--textColor);
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 11px;
+    margin-bottom: 8px;
+}
+
+.ourTeam .contentTeam .box .second p {
+
+    color: #7a7a7a;
+    font-size: 16px;
+}
+
+/* end ourTeam Section */
+
+
+/* start theAwards section */
+
+.theAwards {
+
+    padding-top: var(--mainPaddingSection);
+    padding-bottom: var(--mainPaddingSection);
+}
+
+.theAwards .content {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(570px, 1fr));
+
+}
+
+.theAwards .theAwardsFirstText span {
+
+    color: #989898;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.theAwards .theAwardsFirstText h4 {
+
+    font-size: 28px;
+    font-weight: normal;
+    color: #233b41;
+    letter-spacing: var(--letterSpacing);
+    margin-bottom: 50px;
+}
+
+.theAwards .theAwardsFirst .theAwardsFirstBox {
+    
+    display: flex;
+    justify-content: space-between;
+    margin-right: 100px;
+    align-items: center;
+}
+
+.theAwardsFirstBox1 h3 {
+
+    color: var(--textColor);
+    font-size: 20px;
+}
+
+.theAwardsFirstBox2 h2 {
+
+    font-size: 17px;
+    color: #1e363d;
+    margin-bottom: 10px;
+}
+
+.theAwardsFirstBox2 p {
+
+    color: var(--colorOfP);
+    line-height: var(--lineHeight);
+}
+
+.theAwards .theAwardsSecond img {
+
+    width: 100%;
+    height: 371px;
+}
+
+.theAwards .theAwardsFirst hr {
+
+    margin: 25px 0;
+}
+
+
+
+/* end theAwards section */
+
+
+
+/* start footer section */
+
+footer {
+
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+footer p {
+
+    color: #757575;
+}
+
+footer p span {
+
+    color: #283f45;
+    font-weight: bold;
+}
+/* end footer section */
